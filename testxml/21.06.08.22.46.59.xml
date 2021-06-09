@@ -1,0 +1,5 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><S:Body xmlns:ns2="http://interfaces.my/"><ns2:getAllCountries/></S:Body></S:Envelope>
+
+
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+<SOAP-ENV:Header/><S:Body xmlns:ns2="http://interfaces.my/"><ns2:getAllCountriesResponse><countriesList>Canada</countriesList><countriesList>USA</countriesList><countriesList>India</countriesList><countriesList>England</countriesList><countriesList>Australia</countriesList><countriesList>Neitherland</countriesList></ns2:getAllCountriesResponse></S:Body></S:Envelope>

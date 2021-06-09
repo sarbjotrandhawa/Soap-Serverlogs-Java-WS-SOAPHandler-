@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://interfaces.my/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://interfaces.my/">
+
+<xs:element name="addEmployee" type="tns:addEmployee"/>
+
+<xs:element name="addEmployeeResponse" type="tns:addEmployeeResponse"/>
+
+<xs:element name="getAllCountries" type="tns:getAllCountries"/>
+
+<xs:element name="getAllCountriesResponse" type="tns:getAllCountriesResponse"/>
+
+<xs:element name="getAllEmployees" type="tns:getAllEmployees"/>
+
+<xs:element name="getAllEmployeesResponse" type="tns:getAllEmployeesResponse"/>
+
+<xs:element name="getEmployeeByID" type="tns:getEmployeeByID"/>
+
+<xs:element name="getEmployeeByIDResponse" type="tns:getEmployeeByIDResponse"/>
+
+<xs:complexType name="getAllEmployees">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllEmployeesResponse">
+<xs:sequence>
+<xs:element name="employeeList" type="tns:employee" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="employee">
+<xs:sequence>
+<xs:element name="country" type="xs:string" minOccurs="0"/>
+<xs:element name="department" type="xs:string" minOccurs="0"/>
+<xs:element name="empJob" type="xs:string" minOccurs="0"/>
+<xs:element name="empName" type="xs:string" minOccurs="0"/>
+<xs:element name="empNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEmployee">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:string" minOccurs="0"/>
+<xs:element name="arg3" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEmployeeResponse">
+<xs:sequence>
+<xs:element name="addEmployee" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEmployeeByID">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEmployeeByIDResponse">
+<xs:sequence>
+<xs:element name="getEmployeeById" type="tns:employee" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllCountries">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllCountriesResponse">
+<xs:sequence>
+<xs:element name="countriesList" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
